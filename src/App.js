@@ -4,6 +4,8 @@ import './App.css';
 //custom import files
 import Customer from './components/Customer';
 import Exercise1 from './components/Exercise1';
+import RouterComponent from './components/RouterComponent';
+
 //react router dom
 import {BrowserRouter} from 'react-router-dom';
 
@@ -60,12 +62,15 @@ const customers = [{
 
 function App() {
   return (
+    <BrowserRouter>
     <div>
-    
+    <RouterComponent></RouterComponent>
+
     <Exercise1></Exercise1>  
     {customers.map(c =>{return <Customer key = {c.id} id = {c.id} image = {c.image} name = {c.name} number ={c.number} gender ={c.gender}grade = {c.grade}/>})}
   
     </div>
+    </BrowserRouter>
   );
 }
 
