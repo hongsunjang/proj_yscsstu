@@ -1,13 +1,17 @@
 import React from 'react'
 
+//material UI를 이용하자
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
+
 //render(항상 실행되는 함수)
 class Customer extends React.Component{
 	render(){
         return(
 		    <div>
-                <CustomerProfile id={this.props.id} image={this.props.image} name={this.props.name}/>
-                <CustomerInfo number={this.props.number} gender={this.props.gender} grade ={this.props.grade}/>
-		    </div>
+                <CustomerProfile image = {this.props.image} name = {this.props.name} id ={this.props.id}></CustomerProfile>
+                <CustomerInfo number ={this.props.number} gender ={this.props.gender} grade ={this.props.grade}></CustomerInfo>
+            </div>
         )
 	}
 }
